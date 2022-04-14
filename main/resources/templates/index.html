@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html>
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>Hello World</title>
 <style>
 h1 {
 background-color: #87ceeb;
@@ -14,5 +14,10 @@ margin: 26px 600px 26px 600px;
 </head>
 <body>
 <h1>Hello World</h1>
+<p>名前を入力して下さい。</p>
+<form method="post" action="/index">
+<input type="text" name="text1" />
+<input type="submit" value="Go" />
+</form>
 </body>
 </html>
