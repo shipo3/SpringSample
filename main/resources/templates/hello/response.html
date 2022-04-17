@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+<meta charset="UTF-8">
+<title>Hello Response</title>
+<!-- <link th:href="@{/css/style.css}" rel="stylesheet" type="text/css"> -->
+<style>
+body {
+background-color: #e6e6fa;
+}
+h1 {
+background-color: #dda0dd;
+color: #c71585;
+text-align: center;
+margin: 26px 600px;
+}
+#title{
+margin: 26px 600px 0px;
+font-weight: bold;
+}
+#value {
+margin: 0px 50px 0px 600px;
+}
+
+</style>
+</head>
+
+
+<body>
+<h1>Hello Response</h1>
+<p id="title" >お名前：</p>
+<span th:text="${name}" id="value"></span>さん
+<p id="title" >メッセージ：</p>
+<p th:text="${message}" id="value"></p>
+</body>
+</html>
