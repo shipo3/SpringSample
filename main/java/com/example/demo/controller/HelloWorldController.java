@@ -14,15 +14,13 @@ public class HelloWorldController {
     }
 
     @PostMapping("/index")
-    public String postRequest1(@RequestParam("text1") String str1, Model model) {
 
-	model.addAttribute("name", str1);
+    public String postRequest1(@RequestParam("text1") String str1, Model model1, @RequestParam("text2") String str2,
+	    Model model2) {
+
+	model1.addAttribute("name", str1);
+	model2.addAttribute("message", str2);
 	return "hello/response";
     }
 
-    public String postRequest2(@RequestParam("text2") String str2, Model model) {
-
-	model.addAttribute("message", str2);
-	return "hello/response";
-    }
 }
