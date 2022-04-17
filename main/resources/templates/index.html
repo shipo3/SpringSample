@@ -1,23 +1,45 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
+
 <head>
 <meta charset="UTF-8">
 <title>Hello World</title>
+<!-- <link th:href="@{/css/style.css}" rel="stylesheet" type="text/css"> -->
 <style>
+body {
+background-color: #e6e6fa;
+}
 h1 {
 background-color: #87ceeb;
 color: #0000ff;
 text-align: center;
-margin: 26px 600px 26px 600px;
+margin: 26px 600px;
+}
+#title{
+margin: 26px 600px 0px;
+font-weight: bold;
+}
+span {
+color: #ff0000;
+}
+#box {
+margin: 0px 50px 0px 600px;
+}
+#button{
+cursor: pointer;
 }
 </style>
 </head>
+
 <body>
 <h1>Hello World</h1>
-<p>名前を入力して下さい。</p>
 <form method="post" action="/index">
-<input type="text" name="text1" />
-<input type="submit" value="Go" />
+<p id="title" >名前を入力して下さい。<span>(必須)</span></p>
+<input type="text" name="text1" id="box" size="50" maxlength="30" required>
+<p id="title" >メッセージを入力して下さい。(任意)</p>
+<textarea name="kanso" rows="4" cols="40" id="box" placeholder="メッセージをどうぞ。"></textarea>
+<input type="submit" value="送信する" id="button"/>
+<input type="reset" value="リセットする" id="button"/>
 </form>
 </body>
 </html>
