@@ -4,8 +4,8 @@
 <head>
 <meta charset="UTF-8">
 <title>Hello World</title>
-<!-- <link th:href="@{/css/style.css}" rel="stylesheet" type="text/css"> -->
-<style>
+<link th:href="@{/css/style.css}" rel="stylesheet" type="text/css"> 
+<!-- <style>
 body {
 background-color: #e6e6fa;
 }
@@ -29,15 +29,16 @@ margin: 0px 50px 0px 600px;
 cursor: pointer;
 }
 </style>
+-->
 </head>
 
 <body>
 <h1>Hello World</h1>
 <form method="post" action="/index">
-<p id="title" >名前を入力して下さい。<span>(必須)</span></p>
-<input type="text" name="text1" id="box" size="50" maxlength="30" required>
-<p id="title" >メッセージを入力して下さい。(任意)</p>
-<textarea name="text2" rows="4" cols="40" id="box" placeholder="メッセージをどうぞ。"></textarea>
+<div id="title" >お名前を入力して下さい。<span>(必須)</span></div>
+<input type="text" name="text1" id="box" size="40"  required placeholder="ニックネーム可">
+<div id="title" >メッセージを入力して下さい。(任意)</div>
+<textarea name="text2" rows="4" cols="40" id="box" placeholder="メッセージをどうぞ"></textarea>
 <input type="submit" value="送信する" id="button"/>
 <input type="reset" value="リセットする" id="button"/>
 </form>
