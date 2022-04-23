@@ -27,6 +27,7 @@ public class HelloWorldController {
 	} else {
 	    response = "メッセージありがとうございます(^_^)";
 	}
+
 	model1.addAttribute("name", str1);
 	model2.addAttribute("message", str2);
 	model3.addAttribute("response", response);
