@@ -16,21 +16,20 @@ public class HelloWorldController {
 
     @PostMapping("/index")
 
-    public String postRequest(@RequestParam("text1") String str1, @RequestParam("text2") String str2, Model model1,
-	    Model model2, Model model3) {
+    public String postRequest(@RequestParam("text1") String name, @RequestParam("text2") String message, Model model) {
 
 	String response = "";
 
-	if (str2.isEmpty()) {
+	if (message.isEmpty()) {
 //	    レスポンスメッセージに以下を入れる
 	    response = "これからよろしくお願い致します！";
 	} else {
 	    response = "メッセージありがとうございます(^_^)";
 	}
 
-	model1.addAttribute("name", str1);
-	model2.addAttribute("message", str2);
-	model3.addAttribute("response", response);
+	model.addAttribute("name", name);
+	model.addAttribute("message", message);
+	model.addAttribute("response", response);
 
 	return "hello/response";
     }
