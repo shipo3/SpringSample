@@ -1,0 +1,17 @@
+
+body {
+background-color: #e6e6fa;
+}
+h1 {
+background-color: #dda0dd;
+color: #c71585;
+text-align: center;
+margin: 26px 600px;
+}
+#greeting, #response{
+margin: 26px 600px 0px;
+font-weight: bold;
+}
+#name, #message {
+margin: 0px 50px 0px 600px;
+}

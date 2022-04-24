@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+<meta charset="UTF-8">
+<title>Hello Response</title>
+<link th:href="@{/css/response_style.css}" rel="stylesheet" type="text/css"> 
+</head>
+
+
+<body>
+<h1>Hello Response</h1>
+<p id="greeting" >こんにちは！</p>
+<span th:text="${name}" id="name"></span>さん
+<p th:text="${response}" id="response" >)</p>
+<p th:text="${message}" id="message"></p>
+
+</body>
+</html>

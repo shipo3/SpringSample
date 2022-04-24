@@ -1,18 +1,22 @@
 <!DOCTYPE html>
-<html>
+<html xmlns:th="http://www.thymeleaf.org">
+
 <head>
 <meta charset="UTF-8">
 <title>Hello World</title>
-<style>
-h1 {
-background-color: #87ceeb;
-color: #0000ff;
-text-align: center;
-margin: 26px 600px 26px 600px;
-}
-</style>
+<link th:href="@{/css/style.css}" rel="stylesheet" type="text/css"> 
 </head>
+
 <body>
 <h1>Hello World</h1>
+<form method="post" action="/index">
+<label for="namebox" id="name" >お名前を入力して下さい。<span>(必須)</span></label>
+<input type="text" name="text1" id="namebox" size="40"  required placeholder="ニックネーム可"><br>
+<br>
+<label for="messagebox" id="message" >メッセージを入力して下さい。(任意)</label>
+<textarea name="text2" rows="4" cols="40" maxlength="400" id="messagebox" placeholder="メッセージをどうぞ"></textarea>
+<input type="submit" value="送信する" id="submitbutton"/>
+<input type="reset" value="リセットする" id="resetbutton"/>
+</form>
 </body>
 </html>

@@ -1,0 +1,23 @@
+
+body {
+background-color: #e6e6fa;
+}
+h1 {
+background-color: #87ceeb;
+color: #0000ff;
+text-align: center;
+margin: 26px 600px;
+}
+#name, #message {
+margin: 26px 600px 0px;
+font-weight: bold;
+}
+span {
+color: #ff0000;
+}
+#namebox, #messagebox {
+margin: 0px 50px 0px 600px;
+}
+#submitbutton, #resetbutton{
+cursor: pointer;
+}
